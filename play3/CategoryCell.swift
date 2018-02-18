@@ -27,14 +27,14 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
     }()
     
     func setupViews() {
-        backgroundColor = UIColor.black
+        backgroundColor = UIColor.clear
         
         appsCollectionView.dataSource = self
         appsCollectionView.delegate = self
@@ -57,7 +57,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: frame.height)
+        return CGSize(width: 100, height: frame.height)
     }
     
 }
