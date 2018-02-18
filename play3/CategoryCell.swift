@@ -92,7 +92,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppCell
         cell.app = appCategory?.apps?[indexPath.item]
-        return cell 
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -108,7 +108,23 @@ class AppCell: UICollectionViewCell {
     
     var app: App? {
         didSet {
-            nameLabel.text = app?.name
+            if let name = app?.name {
+                
+               nameLabel.text = app?.name
+            }
+            
+            categoryLabel.text = app?.category
+            
+            if let price = app?.price {
+                stayLabel.text = "$\(price)"
+            } else {
+                stayLabel.text = ""
+            }
+            
+            if let imageName = app?.imageName {
+                imageView.image = UIImage(named: imageName)
+            }
+            
         }
     }
     
@@ -125,8 +141,6 @@ class AppCell: UICollectionViewCell {
     //Add imageView
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named:"3aria2" )
-        //iv.clipsToBounds = true
         iv.layer.masksToBounds = true
         iv.layer.cornerRadius = 16
         iv.contentMode = .scaleAspectFill

@@ -34,9 +34,10 @@ class AppCategory: NSObject {
         var bestNewGamesApps = [App]()
         
         let telepaintApp = App()
-        telepaintApp.name = "Paint"
-        telepaintApp.category = "Games"
-        telepaintApp.price = NSNumber(value: 20.99)
+        telepaintApp.name = "Sage"
+        telepaintApp.imageName = "A1Sage"
+        telepaintApp.category = "simply indulgent"
+        //telepaintApp.price = NSNumber(value: 20.99)
         
         bestNewGamesApps.append(telepaintApp)
         
