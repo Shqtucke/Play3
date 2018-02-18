@@ -58,11 +58,11 @@
 			children = (
 				DC3919C62039BC930048059D /* AppDelegate.swift */,
 				DC3919C82039BC930048059D /* FeaturedAppController.swift */,
+				DC3919D82039C66E0048059D /* CategoryCell.swift */,
 				DC3919CA2039BC930048059D /* Main.storyboard */,
 				DC3919CD2039BC930048059D /* Assets.xcassets */,
 				DC3919CF2039BC930048059D /* LaunchScreen.storyboard */,
 				DC3919D22039BC930048059D /* Info.plist */,
-				DC3919D82039C66E0048059D /* CategoryCell.swift */,
 			);
 			path = play3;
 			sourceTree = "<group>";

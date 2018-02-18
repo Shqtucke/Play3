@@ -24,10 +24,10 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     let appsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        
+        layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = UIColor.blue
+        collectionView.backgroundColor = UIColor.white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
@@ -56,6 +56,10 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: frame.height)
+    }
+    
 }
 
 class AppCell: UICollectionViewCell {
@@ -71,8 +75,7 @@ class AppCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        backgroundColor = UIColor.red
-    }
+        backgroundColor = UIColor.black    }
 }
 
 
