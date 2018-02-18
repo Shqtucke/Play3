@@ -74,8 +74,22 @@ class AppCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //Add imageView
+    let imageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named:"3mirage" )
+        iv.clipsToBounds = true 
+        iv.contentMode = .scaleAspectFill
+        return iv
+    }()
+    
     func setupViews() {
-        backgroundColor = UIColor.black    }
+        //backgroundColor = UIColor.black
+        
+        addSubview(imageView)
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
+        
+    }
 }
 
 
