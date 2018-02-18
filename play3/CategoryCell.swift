@@ -60,6 +60,9 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return CGSize(width: 100, height: frame.height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 14, 0, 14)
+    }
 }
 
 class AppCell: UICollectionViewCell {
@@ -78,17 +81,37 @@ class AppCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named:"3mirage" )
-        iv.clipsToBounds = true 
+        //iv.clipsToBounds = true
+        iv.layer.masksToBounds = true
+        iv.layer.cornerRadius = 16
         iv.contentMode = .scaleAspectFill
         return iv
     }()
     
+    //Create Label
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Las Vegas: Casinos"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 2
+        return label
+    }()
+    
+    let categoryLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Restaurants"
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.numberOfLines = 1
+        return label
+    }()
+    
     func setupViews() {
-        //backgroundColor = UIColor.black
-        
         addSubview(imageView)
+        addSubview(nameLabel)
+        addSubview(categoryLabel)
         imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
-        
+        nameLabel.frame = CGRect(x: 0, y: frame.width + 2, width: frame.width, height: 40)
+        categoryLabel.frame = CGRect(x: 0, y: frame.width + 42, width: frame.width, height: 20)
     }
 }
 
