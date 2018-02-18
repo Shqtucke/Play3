@@ -11,9 +11,14 @@ import UIKit
 class FeaturedAppController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let cellId = "cellId"
+    
+    var appCategories: [AppCategory]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        appCategories = AppCategory.sampleAppCategories()
+        
         
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
@@ -25,7 +30,10 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        if let count = appCategories?.count {
+            return count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

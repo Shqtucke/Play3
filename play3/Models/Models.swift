@@ -11,8 +11,27 @@ import UIKit
 class AppCategory: NSObject {
     
     var name: String?
-    
-    var app: [App]?
+    var apps: [App]?
+
+    static func sampleAppCategories() -> [AppCategory] {
+        
+        let bestNewAppsCategory = AppCategory()
+        bestNewAppsCategory.name = "Best New Apps"
+        
+        var apps = [App]()
+        
+        //logic
+        let frozenApp = App()
+        frozenApp.name = "Aria Casino: Smoke-free"
+        frozenApp.imageName = "3aria2"
+        frozenApp.category = "Strip Casino"
+        frozenApp.price = NSNumber(value: 199.98)
+        apps.append(frozenApp)
+        
+        bestNewAppsCategory.apps = apps
+        return [bestNewAppsCategory]
+    }
+
 }
 
 class App: NSObject {

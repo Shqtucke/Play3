@@ -103,7 +103,7 @@ class AppCell: UICollectionViewCell {
     //Add imageView
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named:"3mirage" )
+        iv.image = UIImage(named:"3aria2" )
         //iv.clipsToBounds = true
         iv.layer.masksToBounds = true
         iv.layer.cornerRadius = 16
