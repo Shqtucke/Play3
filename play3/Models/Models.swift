@@ -15,8 +15,8 @@ class AppCategory: NSObject {
 
     static func sampleAppCategories() -> [AppCategory] {
         
-        let bestNewAppsCategory = AppCategory()
-        bestNewAppsCategory.name = "Casino's on the Strip"
+        let casinoCategory = AppCategory()
+        casinoCategory.name = "Casino's on the Strip"  //1st category
         
         var apps = [App]()
         
@@ -46,40 +46,56 @@ class AppCategory: NSObject {
         caesars.category = "ceasar rules"
         apps.append(caesars)
         
-        let bestNewGamesCategory = AppCategory()
-        bestNewGamesCategory.name = "Restaurants"
+        casinoCategory.apps = apps
         
-        var bestNewGamesApps = [App]()
+        //2nd Category
+        let restaurantCategory = AppCategory()
+        restaurantCategory.name = "Restaurants"  //2nd category
         
-        let telepaintApp = App()
-        telepaintApp.name = "Aria Cafe"
-        telepaintApp.category = "Cafe"
-        telepaintApp.imageName = "A1AriaC"
-        bestNewGamesApps.append(telepaintApp)
+        var bestRest = [App]()
+        
+        let ariaC = App()
+        ariaC.name = "Aria Cafe"
+        ariaC.category = "Cafe"
+        ariaC.imageName = "A1AriaC"
+        bestRest.append(ariaC)
         
         let buffet = App()
         buffet.name = "Aria Buffet"
         buffet.category = "Buffet"
         buffet.imageName = "A1buffet"
-        bestNewGamesApps.append(buffet)
+        bestRest.append(buffet)
         
         let javier = App()
         javier.name = "Javier"
         javier.category = "Cuisine"
         javier.imageName = "A1javier"
-        bestNewGamesApps.append(javier)
+        bestRest.append(javier)
         
         let jean = App()
         jean.name = "Jean George"
         jean.category = "Cuisine"
         jean.imageName = "A1JeanG"
-        bestNewGamesApps.append(jean)
+        bestRest.append(jean)
         
-        bestNewGamesCategory.apps = bestNewGamesApps
+        restaurantCategory.apps = bestRest
+        
+        let transportationCategory = AppCategory()
+        transportationCategory.name = "Transportation"  //3rd category
+        
+        var transportation = [App]()
+        let taxi = App()
+        taxi.name = "Ride or Die"
+        taxi.category = "taxi"
+        taxi.imageName = "5taxi"
+        transportation.append(taxi)
+        
+        transportationCategory.apps = transportation
         
         
-        bestNewAppsCategory.apps = apps
-        return [bestNewAppsCategory, bestNewGamesCategory]
+        return [casinoCategory, restaurantCategory, transportationCategory]
+        
+        
     }
 
 }
