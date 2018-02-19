@@ -122,6 +122,9 @@ class AppCell: UICollectionViewCell {
                 stayLabel.text = ""
             }
             
+            if let imageName = app?.imageName {
+                imageView.image = UIImage(named: imageName)
+            }
         }
     }
     
@@ -138,8 +141,6 @@ class AppCell: UICollectionViewCell {
     //Add imageView
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named:"3aria2" )
-        //iv.clipsToBounds = true
         iv.layer.masksToBounds = true
         iv.layer.cornerRadius = 16
         iv.contentMode = .scaleAspectFill
