@@ -16,24 +16,35 @@ class AppCategory: NSObject {
     static func sampleAppCategories() -> [AppCategory] {
         
         let bestNewAppsCategory = AppCategory()
-        bestNewAppsCategory.name = "Best New Apps"
+        bestNewAppsCategory.name = "Casino's on the Strip"
         
         var apps = [App]()
         
         //logic
-        let frozenApp = App()
-        frozenApp.name = "Aria Casino: Smoke-free"
-        frozenApp.imageName = "3aria2"
-        frozenApp.category = "Strip Casino"
-        frozenApp.price = NSNumber(value: 199.98)
-        apps.append(frozenApp)
+        let aria = App()
+        aria.name = "Aria Casino: Smoke-free"
+        aria.imageName = "3aria2"
+        aria.category = "Strip Casino"
+        //aria.price = NSNumber(value: 199.98)
+        apps.append(aria)
+        
+        let ballys = App()
+        ballys.name = "Ballys"
+        ballys.imageName = "3ballys1"
+        ballys.category = "strip"
+        apps.append(ballys)
         
         let bellagio = App()
         bellagio.name = "Bellagio"
         bellagio.imageName = "3bellagio"
         bellagio.category = "Strip Casino"
-        bellagio.price = NSNumber(value: 209.00)
         apps.append(bellagio)
+        
+        let caesars = App()
+        caesars.name = "Caesars"
+        caesars.imageName = "3caesars"
+        caesars.category = "ceasar rules"
+        apps.append(caesars)
         
         let bestNewGamesCategory = AppCategory()
         bestNewGamesCategory.name = "Restaurants"
@@ -41,11 +52,28 @@ class AppCategory: NSObject {
         var bestNewGamesApps = [App]()
         
         let telepaintApp = App()
-        telepaintApp.name = "Paint"
-        telepaintApp.category = "Games"
-        telepaintApp.price = NSNumber(value: 20.99)
-        
+        telepaintApp.name = "Aria Cafe"
+        telepaintApp.category = "Cafe"
+        telepaintApp.imageName = "A1AriaC"
         bestNewGamesApps.append(telepaintApp)
+        
+        let buffet = App()
+        buffet.name = "Aria Buffet"
+        buffet.category = "Buffet"
+        buffet.imageName = "A1buffet"
+        bestNewGamesApps.append(buffet)
+        
+        let javier = App()
+        javier.name = "Javier"
+        javier.category = "Cuisine"
+        javier.imageName = "A1javier"
+        bestNewGamesApps.append(javier)
+        
+        let jean = App()
+        jean.name = "Jean George"
+        jean.category = "Cuisine"
+        jean.imageName = "A1JeanG"
+        bestNewGamesApps.append(jean)
         
         bestNewGamesCategory.apps = bestNewGamesApps
         
