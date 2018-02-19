@@ -28,6 +28,13 @@ class AppCategory: NSObject {
         frozenApp.price = NSNumber(value: 199.98)
         apps.append(frozenApp)
         
+        let bellagio = App()
+        bellagio.name = "Bellagio"
+        bellagio.imageName = "3bellagio"
+        bellagio.category = "Strip Casino"
+        bellagio.price = NSNumber(value: 209.00)
+        apps.append(bellagio)
+        
         let bestNewGamesCategory = AppCategory()
         bestNewGamesCategory.name = "Restaurants"
         

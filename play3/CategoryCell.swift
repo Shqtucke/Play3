@@ -108,7 +108,20 @@ class AppCell: UICollectionViewCell {
     
     var app: App? {
         didSet {
-            nameLabel.text = app?.name
+            
+            if let name = app?.name {
+                
+                nameLabel.text = name
+            }
+            
+            categoryLabel.text = app?.category
+            
+            if let price = app?.price {
+                stayLabel.text = "$\(price)"
+            } else {
+                stayLabel.text = ""
+            }
+            
         }
     }
     
