@@ -37,7 +37,9 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Best Restaurants"
-        label.font = UIFont.systemFont(ofSize: 16)
+        //label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = UIColor.blue
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -151,8 +153,8 @@ class AppCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Las Vegas: Casinos"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.numberOfLines = 2
+        //label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
     

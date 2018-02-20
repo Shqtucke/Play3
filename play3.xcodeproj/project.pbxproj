@@ -14,6 +14,8 @@
 		DC3919D12039BC930048059D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3919CF2039BC930048059D /* LaunchScreen.storyboard */; };
 		DC3919D92039C66E0048059D /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3919D82039C66E0048059D /* CategoryCell.swift */; };
 		DC3919DC203A1C670048059D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3919DB203A1C670048059D /* Models.swift */; };
+		DC3919DE203B5FF80048059D /* pod.json in Resources */ = {isa = PBXBuildFile; fileRef = DC3919DD203B5FF70048059D /* pod.json */; };
+		DC3919E0203B60FD0048059D /* pods.json in Resources */ = {isa = PBXBuildFile; fileRef = DC3919DF203B60FC0048059D /* pods.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DC3919D22039BC930048059D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC3919D82039C66E0048059D /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		DC3919DB203A1C670048059D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DC3919DD203B5FF70048059D /* pod.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pod.json; sourceTree = "<group>"; };
+		DC3919DF203B60FC0048059D /* pods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pods.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				DC3919C82039BC930048059D /* FeaturedAppController.swift */,
 				DC3919D82039C66E0048059D /* CategoryCell.swift */,
 				DC3919CA2039BC930048059D /* Main.storyboard */,
+				DC3919DF203B60FC0048059D /* pods.json */,
+				DC3919DD203B5FF70048059D /* pod.json */,
 				DC3919CD2039BC930048059D /* Assets.xcassets */,
 				DC3919CF2039BC930048059D /* LaunchScreen.storyboard */,
 				DC3919D22039BC930048059D /* Info.plist */,
@@ -137,9 +143,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3919E0203B60FD0048059D /* pods.json in Resources */,
 				DC3919D12039BC930048059D /* LaunchScreen.storyboard in Resources */,
 				DC3919CE2039BC930048059D /* Assets.xcassets in Resources */,
 				DC3919CC2039BC930048059D /* Main.storyboard in Resources */,
+				DC3919DE203B5FF80048059D /* pod.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
