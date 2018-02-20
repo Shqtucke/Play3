@@ -38,7 +38,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         let label = UILabel()
         label.text = "Best Restaurants"
         //label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = UIColor.blue
+        label.textColor = UIColor.black
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

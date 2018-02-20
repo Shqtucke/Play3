@@ -127,12 +127,42 @@ class AppCategory: NSObject {
         rentals.category = "7am - 9pm"
         transportation.append(rentals)
         
-        
-        
         transportationCategory.apps = transportation
         
+        //4th Category *****Airlines****
+        let airlineCategory = AppCategory()
+        airlineCategory.name = "Airlines"
         
-        return [casinoCategory, restaurantCategory, transportationCategory]
+        var airlines = [App]()
+        
+        let delta = App()
+        delta.name = "Delta"
+        delta.imageName = "6delta2"
+        airlines.append(delta)
+        
+        let ameri = App()
+        ameri.name = "American"
+        ameri.imageName = "6ameri"
+        airlines.append(ameri)
+        
+        let sw = App()
+        sw.name = "Southwest"
+        sw.imageName = "6sw"
+        airlines.append(sw)
+        
+        let spir = App()
+        spir.name = "Spirit"
+        spir.imageName = "6spi2"
+        airlines.append(spir)
+        
+        let unit = App()
+        unit.name = "United"
+        unit.imageName = "6unit"
+        airlines.append(unit)
+        
+        airlineCategory.apps = airlines
+        
+        return [casinoCategory, restaurantCategory, transportationCategory, airlineCategory]
         
         
     }

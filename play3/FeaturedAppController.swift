@@ -18,6 +18,7 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         super.viewDidLoad()
         
         appCategories = AppCategory.sampleAppCategories()
+        navigationItem.title = "Futucke inc"
         
         
         collectionView?.backgroundColor = UIColor.white
@@ -40,6 +41,13 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.item == 1 {
+            
+            return CGSize(width: view.frame.width, height: 160)
+        }
+        
+        
         return CGSize(width: view.frame.width, height: 230)
     }
 
