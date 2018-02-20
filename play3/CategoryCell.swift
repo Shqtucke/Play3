@@ -114,6 +114,24 @@ class AppCell: UICollectionViewCell {
             if let name = app?.name {
                 
                 nameLabel.text = name
+                
+                let rect = NSString(string: name).boundingRect(with: CGSize(width: frame.width, height:1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+                
+                if rect.height > 20 {
+                    
+                    
+                    categoryLabel.frame = CGRect(x: 0, y: frame.width + 38, width: frame.width, height: 20)
+                    stayLabel.frame = CGRect(x: 0, y: frame.width + 56, width: frame.width, height: 20)
+                    
+                } else {
+                    
+                    categoryLabel.frame = CGRect(x: 0, y: frame.width + 22, width: frame.width, height: 20)
+                    stayLabel.frame = CGRect(x: 0, y: frame.width + 40, width: frame.width, height: 20)
+                    
+                }
+                
+                nameLabel.frame = CGRect(x: 0, y: frame.width + 8, width: frame.width, height: 40)
+                nameLabel.sizeToFit()
             }
             
             categoryLabel.text = app?.category
