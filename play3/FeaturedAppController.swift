@@ -17,6 +17,18 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //JSON - first steps added to retrieve JSON
+        let url = Bundle.main.url(forResource: "pods", withExtension: "json")
+        
+        if let url = url {
+            
+            let data = NSData(contentsOf: url)
+            
+            if let data = data {
+                print(data)
+            }
+        }
+        
         appCategories = AppCategory.sampleAppCategories()
         navigationItem.title = "Futucke inc"
         
