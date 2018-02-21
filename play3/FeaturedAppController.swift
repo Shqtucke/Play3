@@ -42,13 +42,13 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if indexPath.item == 1 {
+        if indexPath.item == 3 {
             
-            return CGSize(width: view.frame.width, height: 160)
+            return CGSize(width: view.frame.width, height: 180)
         }
         
         
-        return CGSize(width: view.frame.width, height: 230)
+        return CGSize(width: view.frame.width, height: 200)
     }
 
 
