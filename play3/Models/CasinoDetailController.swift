@@ -58,22 +58,49 @@ class CasinoDetailHeader: BaseCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 16
-        iv.layer.masksToBounds = true 
+        iv.layer.masksToBounds = true
         return iv
         
     }()
+    
+    let segmentedControl: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["Dine", "Shop", "Play"])
+        return sc
+    }()
+    
+    
     
     override func setupViews() {
         super.setupViews()
         
     
         addSubview(imageView)
+        addSubview(segmentedControl)
         
-        imageView.backgroundColor = UIColor.yellow
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        addConstraintWithFormat(format: "H:|-14-[v0(100)]", views: imageView)
+        addConstraintWithFormat(format: "V:|-14-[v0(100)]", views: imageView)
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0(100)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":imageView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-14-[v0(100)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":imageView]))
+        addConstraintWithFormat(format: "H:|-40-[v0]-40-|", views: segmentedControl)
+        addConstraintWithFormat(format: "V:[v0(34)]-8-|", views: segmentedControl)
+        
+        
+    }
+}
+
+extension UIView {
+    
+    func addConstraintWithFormat(format: String, views: UIView...) {
+        
+        var viewsDictionary = [String: UIView]()
+        
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            viewsDictionary[key] = view
+            view.translatesAutoresizingMaskIntoConstraints = false
+            
+        }
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format , options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
     }
 }
 
