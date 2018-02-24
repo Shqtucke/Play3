@@ -46,6 +46,25 @@ class AppCategory: NSObject {
         caesars.category = "Strip Casino"
         apps.append(caesars)
         
+        let casinoR = App()
+        casinoR.name = "Casino Royale"
+        casinoR.imageName = "3casinoR"
+        casinoR.category = "Strip Casino"
+        apps.append(casinoR)
+        
+        let circus = App()
+        circus.name = "Circus Circus"
+        circus.imageName = "3circus"
+        circus.category = "South Strip"
+        apps.append(circus)
+        
+        let cromwell = App()
+        cromwell.name = "The Cromwell"
+        cromwell.imageName = "3cromwell"
+        cromwell.category = "Strip Casino"
+        apps.append(cromwell)
+        
+        
         casinoCategory.apps = apps
         
         //2nd Category **********RESTAURANTS ********
