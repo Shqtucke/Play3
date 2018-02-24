@@ -17,6 +17,7 @@
 		DC3919DE203B5FF80048059D /* pod.json in Resources */ = {isa = PBXBuildFile; fileRef = DC3919DD203B5FF70048059D /* pod.json */; };
 		DC3919E0203B60FD0048059D /* pods.json in Resources */ = {isa = PBXBuildFile; fileRef = DC3919DF203B60FC0048059D /* pods.json */; };
 		DCC2C5A0203CF5420060676D /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2C59F203CF5420060676D /* MyTabBar.swift */; };
+		DCD13AC12041EC9300D38ABF /* CasinoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD13AC02041EC9300D38ABF /* CasinoDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DC3919DD203B5FF70048059D /* pod.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pod.json; sourceTree = "<group>"; };
 		DC3919DF203B60FC0048059D /* pods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pods.json; sourceTree = "<group>"; };
 		DCC2C59F203CF5420060676D /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		DCD13AC02041EC9300D38ABF /* CasinoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasinoDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				DC3919DB203A1C670048059D /* Models.swift */,
 				DCC2C59F203CF5420060676D /* MyTabBar.swift */,
+				DCD13AC02041EC9300D38ABF /* CasinoDetailController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC3919C92039BC930048059D /* FeaturedAppController.swift in Sources */,
+				DCD13AC12041EC9300D38ABF /* CasinoDetailController.swift in Sources */,
 				DC3919C72039BC930048059D /* AppDelegate.swift in Sources */,
 				DC3919D92039C66E0048059D /* CategoryCell.swift in Sources */,
 				DCC2C5A0203CF5420060676D /* MyTabBar.swift in Sources */,

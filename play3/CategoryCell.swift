@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var featuredAppsController: FeaturedAppController?
+    
     var appCategory: AppCategory? {
         
         didSet {
@@ -85,7 +87,10 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("app selected")
+        
+        if let app = appCategory?.apps?[indexPath.item] {
+            featuredAppsController?.showDetailforCasino(app: app)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

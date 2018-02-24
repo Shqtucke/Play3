@@ -36,11 +36,13 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
     }
+
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func showDetailforCasino(app: App) {
         
         //click on category to go to new View Controller
-        let appDetailController = UIViewController()
+        let layout = UICollectionViewFlowLayout()
+        let appDetailController = CasinoDetailController(collectionViewLayout: layout)
         navigationController?.pushViewController(appDetailController, animated: true)
     }
     
@@ -48,6 +50,7 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
         cell.appCategory = appCategories?[indexPath.item]
+        cell.featuredAppsController = self
         
         return cell
     }
