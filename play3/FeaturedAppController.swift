@@ -43,7 +43,10 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         //click on category to go to new View Controller
         let layout = UICollectionViewFlowLayout()
         let appDetailController = CasinoDetailController(collectionViewLayout: layout)
+        appDetailController.app = app 
         navigationController?.pushViewController(appDetailController, animated: true)
+        
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
