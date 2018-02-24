@@ -31,6 +31,7 @@ class CasinoDetailController: UICollectionViewController, UICollectionViewDelega
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! CasinoDetailHeader
         
+        header.app = app 
         return header
     }
     
@@ -40,6 +41,16 @@ class CasinoDetailController: UICollectionViewController, UICollectionViewDelega
 }
 
 class CasinoDetailHeader: BaseCell {
+    
+    var app: App? {
+        didSet {
+            
+            if let imageName = app?.imageName {
+                imageView.image = UIImage(named: imageName)
+                
+            }
+        }
+    }
     
     let imageView: UIImageView = {
         let iv = UIImageView()
