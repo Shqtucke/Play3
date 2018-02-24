@@ -51,6 +51,8 @@ class CasinoDetailHeader: BaseCell {
                 imageView.image = UIImage(named: imageName)
                 
             }
+            
+            nameLabel.text = app?.name
         }
     }
     
@@ -65,9 +67,29 @@ class CasinoDetailHeader: BaseCell {
     
     let segmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Dine", "Shop", "Play"])
+        sc.tintColor = UIColor.darkGray
+        sc.selectedSegmentIndex = 0
+        
         return sc
     }()
     
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "TUCKE"
+        label.font = UIFont.systemFont(ofSize: 16)
+        return label
+    }()
+    
+    let mapButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Map", for: .normal)
+        button.layer.borderColor = UIColor.blue.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        return button
+        
+    }()
     
     
     override func setupViews() {
@@ -76,12 +98,20 @@ class CasinoDetailHeader: BaseCell {
     
         addSubview(imageView)
         addSubview(segmentedControl)
+        addSubview(nameLabel)
+        addSubview(mapButton)
         
-        addConstraintWithFormat(format: "H:|-14-[v0(100)]", views: imageView)
+        addConstraintWithFormat(format: "H:|-14-[v0(100)]-8-[v1]|", views: imageView, nameLabel)
         addConstraintWithFormat(format: "V:|-14-[v0(100)]", views: imageView)
+        
+        addConstraintWithFormat(format: "V:|-14-[v0(20)]", views: nameLabel)
         
         addConstraintWithFormat(format: "H:|-40-[v0]-40-|", views: segmentedControl)
         addConstraintWithFormat(format: "V:[v0(34)]-8-|", views: segmentedControl)
+        
+        addConstraintWithFormat(format: "H:[v0(60)]-40-|", views: mapButton)
+        addConstraintWithFormat(format: "V:[v0(32)]-56-|", views: mapButton)
+        
         
         
     }
