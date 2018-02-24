@@ -22,6 +22,8 @@ class CasinoDetailController: UICollectionViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView?.alwaysBounceVertical = true
+        
         collectionView?.backgroundColor = UIColor.white
         
         collectionView?.register(CasinoDetailHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
@@ -31,7 +33,7 @@ class CasinoDetailController: UICollectionViewController, UICollectionViewDelega
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! CasinoDetailHeader
         
-        header.app = app 
+        header.app = app
         return header
     }
     
@@ -54,7 +56,9 @@ class CasinoDetailHeader: BaseCell {
     
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleToFill
+        iv.contentMode = .scaleAspectFill
+        iv.layer.cornerRadius = 16
+        iv.layer.masksToBounds = true 
         return iv
         
     }()
@@ -68,8 +72,8 @@ class CasinoDetailHeader: BaseCell {
         imageView.backgroundColor = UIColor.yellow
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":imageView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":imageView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0(100)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":imageView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-14-[v0(100)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":imageView]))
     }
 }
 
