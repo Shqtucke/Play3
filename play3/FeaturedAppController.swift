@@ -37,6 +37,13 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //click on category to go to new View Controller
+        let appDetailController = UIViewController()
+        navigationController?.pushViewController(appDetailController, animated: true)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
