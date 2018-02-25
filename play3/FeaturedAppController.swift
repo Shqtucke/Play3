@@ -30,7 +30,14 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
                 do {
                     let jsonObject = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments)
                     
-                    print(jsonObject)
+                    //print(jsonObject)
+                    if let object = jsonObject as? [String: AnyObject] {
+                        
+                        if let allFriends = object["employees"] as? [[String: AnyObject]] {
+                            
+                            print(allFriends)
+                        }
+                    }
                     
                 } catch {
                     
