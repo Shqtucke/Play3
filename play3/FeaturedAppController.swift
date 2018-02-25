@@ -18,14 +18,24 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
         super.viewDidLoad()
         
         //JSON - first steps added to retrieve JSON
-        let url = Bundle.main.url(forResource: "pods", withExtension: "json")
+        let url = Bundle.main.url(forResource: "pod", withExtension: "json")
         
         if let url = url {
             
             let data = NSData(contentsOf: url)
             
             if let data = data {
-                print(data)
+                //print(data)
+                
+                do {
+                    let jsonObject = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments)
+                    
+                    print(jsonObject)
+                    
+                } catch {
+                    
+                    print("error occured")
+                }
             }
         }
         

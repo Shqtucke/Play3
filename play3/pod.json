@@ -1,15 +1,25 @@
 
 
-"Friends" : [
 {
-   "fullName" : "Shawn Tucker",
-   "Dob" : "1971"
-},
-{
-   "fullName" : "John White",
-   "Dob" : "1981"
-},
-{
-   "fullName" : "Jerry Smith",
-   "Dob" : "1991"
-},
+    
+    "employees":[
+                 {
+                 "id": 1,
+                 "first_name": "Shawn",
+                 "last_name": "Tucker",
+                 "email": "shqtucke@gmail.com"
+                 },
+                 {
+                 "id": 2,
+                 "first_name": "Wendell",
+                 "last_name": "Logan",
+                 "email": "LoganWS@gmail.com"
+                 },
+                 {
+                 "id": 3,
+                 "first_name": "Michael",
+                 "last_name": "West",
+                 "email": "MrWestM@gmail.com"
+                 }
+                 ]
+}
