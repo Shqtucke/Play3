@@ -17,7 +17,9 @@ class CustomTabBarController: UITabBarController {
         let layout = UICollectionViewFlowLayout()
         let friendsController = FeaturedAppController(collectionViewLayout: layout)
         let recentNav = UINavigationController(rootViewController: friendsController)
-        recentNav.tabBarItem.title = "Recent"
+        recentNav.tabBarItem.title = "Banks"
+        recentNav.tabBarItem.image = UIImage(named: "7money1")
+        
         
         viewControllers = [recentNav]
     }
