@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0AD9FB2044BFD60091BBE6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0AD9FA2044BFD60091BBE6 /* CustomTabBarController.swift */; };
 		DC3919C72039BC930048059D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3919C62039BC930048059D /* AppDelegate.swift */; };
 		DC3919C92039BC930048059D /* FeaturedAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3919C82039BC930048059D /* FeaturedAppController.swift */; };
 		DC3919CC2039BC930048059D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3919CA2039BC930048059D /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0AD9FA2044BFD60091BBE6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		DC3919C32039BC920048059D /* play3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = play3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3919C62039BC930048059D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC3919C82039BC930048059D /* FeaturedAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAppController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				DC3919CD2039BC930048059D /* Assets.xcassets */,
 				DC3919CF2039BC930048059D /* LaunchScreen.storyboard */,
 				DC3919D22039BC930048059D /* Info.plist */,
+				DC0AD9FA2044BFD60091BBE6 /* CustomTabBarController.swift */,
 			);
 			path = play3;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC3919C92039BC930048059D /* FeaturedAppController.swift in Sources */,
+				DC0AD9FB2044BFD60091BBE6 /* CustomTabBarController.swift in Sources */,
 				DCD13AC12041EC9300D38ABF /* CasinoDetailController.swift in Sources */,
 				DC3919C72039BC930048059D /* AppDelegate.swift in Sources */,
 				DC3919D92039C66E0048059D /* CategoryCell.swift in Sources */,

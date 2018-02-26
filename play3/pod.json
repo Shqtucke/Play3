@@ -2,24 +2,27 @@
 
 {
     
-    "employees":[
+    "casinos":[
                  {
                  "id": 1,
-                 "first_name": "Shawn",
-                 "last_name": "Tucker",
-                 "email": "shqtucke@gmail.com"
+                 "casino_name": "Aria",
+                 "image_name": "3aria",
+                 "location": "3760 Flamingo rd",
+                 "website": "https://www.aria.com"
                  },
                  {
                  "id": 2,
-                 "first_name": "Wendell",
-                 "last_name": "Logan",
-                 "email": "LoganWS@gmail.com"
+                 "casino_name": "Ballys",
+                 "image_name": "3ballys",
+                 "location": "3760 Flamingo rd",
+                 "website": "https://www.ballys.com"
                  },
                  {
                  "id": 3,
-                 "first_name": "Michael",
-                 "last_name": "West",
-                 "email": "MrWestM@gmail.com"
+                 "casino_name": "Bellagio",
+                 "image_name": "3bellagio",
+                 "location": "3760 Flamingo rd",
+                 "website": "https://www.bellagio.com"
                  }
                  ]
 }

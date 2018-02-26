@@ -33,9 +33,10 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
                     //print(jsonObject)
                     if let object = jsonObject as? [String: AnyObject] {
                         
-                        if let allFriends = object["employees"] as? [[String: AnyObject]] {
+                        if let allCasinos = object["casinos"] as? [[String: AnyObject]] {
                             
-                            print(allFriends)
+                            
+                            print(allCasinos)
                         }
                     }
                     
