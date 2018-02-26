@@ -21,6 +21,23 @@ class CustomTabBarController: UITabBarController {
         recentNav.tabBarItem.image = UIImage(named: "7money1")
         
         
-        viewControllers = [recentNav]
+        viewControllers = [recentNav, createDummyNav(title: "Tours", imageName: "7tours"), createDummyNav(title: "Conceirge", imageName: "7conce1"), createDummyNav(title: "dine", imageName: "7food3"), createDummyNav(title: "Slots", imageName: "7slots")]
     }
+
+    private func createDummyNav(title: String, imageName: String) -> UINavigationController {
+        let viewController = UIViewController()
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.tabBarItem.title = title
+        navController.tabBarItem.image = UIImage(named: imageName)
+        return navController
+        
+    }
+
+
 }
+
+
+
+
+
+
