@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.black], for: .normal)
+        UITabBar.appearance().barTintColor = UIColor.red
+        
+        
 //        let layout = UICollectionViewFlowLayout()
 //        let featuredAppsController = FeaturedAppController(collectionViewLayout: layout)
 //        window?.rootViewController = UINavigationController(rootViewController: featuredAppsController)

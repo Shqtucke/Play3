@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC029D39205EB18700598B52 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029D38205EB18700598B52 /* RestaurantViewController.swift */; };
+		DC029D3B205EB39700598B52 /* HotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029D3A205EB39700598B52 /* HotelViewController.swift */; };
+		DC029D3D205EB4DA00598B52 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029D3C205EB4DA00598B52 /* PlayViewController.swift */; };
 		DC0AD9FB2044BFD60091BBE6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0AD9FA2044BFD60091BBE6 /* CustomTabBarController.swift */; };
+		DC0ADA012044E4880091BBE6 /* AirportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0ADA002044E4880091BBE6 /* AirportViewController.swift */; };
 		DC3919C72039BC930048059D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3919C62039BC930048059D /* AppDelegate.swift */; };
 		DC3919C92039BC930048059D /* FeaturedAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3919C82039BC930048059D /* FeaturedAppController.swift */; };
 		DC3919CC2039BC930048059D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3919CA2039BC930048059D /* Main.storyboard */; };
@@ -22,7 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC029D38205EB18700598B52 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		DC029D3A205EB39700598B52 /* HotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewController.swift; sourceTree = "<group>"; };
+		DC029D3C205EB4DA00598B52 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		DC0AD9FA2044BFD60091BBE6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		DC0ADA002044E4880091BBE6 /* AirportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportViewController.swift; sourceTree = "<group>"; };
 		DC3919C32039BC920048059D /* play3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = play3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3919C62039BC930048059D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC3919C82039BC930048059D /* FeaturedAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAppController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC029D37205EAF2200598B52 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC0AD9FA2044BFD60091BBE6 /* CustomTabBarController.swift */,
+				DCD13AC02041EC9300D38ABF /* CasinoDetailController.swift */,
+				DC0ADA002044E4880091BBE6 /* AirportViewController.swift */,
+				DC3919C82039BC930048059D /* FeaturedAppController.swift */,
+				DC029D38205EB18700598B52 /* RestaurantViewController.swift */,
+				DC029D3A205EB39700598B52 /* HotelViewController.swift */,
+				DC029D3C205EB4DA00598B52 /* PlayViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		DC3919BA2039BC920048059D = {
 			isa = PBXGroup;
 			children = (
@@ -68,9 +90,9 @@
 		DC3919C52039BC920048059D /* play3 */ = {
 			isa = PBXGroup;
 			children = (
-				DC3919DA203A1C410048059D /* Models */,
 				DC3919C62039BC930048059D /* AppDelegate.swift */,
-				DC3919C82039BC930048059D /* FeaturedAppController.swift */,
+				DC029D37205EAF2200598B52 /* Controllers */,
+				DC3919DA203A1C410048059D /* Models */,
 				DC3919D82039C66E0048059D /* CategoryCell.swift */,
 				DC3919CA2039BC930048059D /* Main.storyboard */,
 				DC3919DF203B60FC0048059D /* pods.json */,
@@ -78,7 +100,6 @@
 				DC3919CD2039BC930048059D /* Assets.xcassets */,
 				DC3919CF2039BC930048059D /* LaunchScreen.storyboard */,
 				DC3919D22039BC930048059D /* Info.plist */,
-				DC0AD9FA2044BFD60091BBE6 /* CustomTabBarController.swift */,
 			);
 			path = play3;
 			sourceTree = "<group>";
@@ -88,7 +109,6 @@
 			children = (
 				DC3919DB203A1C670048059D /* Models.swift */,
 				DCC2C59F203CF5420060676D /* MyTabBar.swift */,
-				DCD13AC02041EC9300D38ABF /* CasinoDetailController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,11 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0ADA012044E4880091BBE6 /* AirportViewController.swift in Sources */,
 				DC3919C92039BC930048059D /* FeaturedAppController.swift in Sources */,
 				DC0AD9FB2044BFD60091BBE6 /* CustomTabBarController.swift in Sources */,
 				DCD13AC12041EC9300D38ABF /* CasinoDetailController.swift in Sources */,
+				DC029D3D205EB4DA00598B52 /* PlayViewController.swift in Sources */,
+				DC029D39205EB18700598B52 /* RestaurantViewController.swift in Sources */,
 				DC3919C72039BC930048059D /* AppDelegate.swift in Sources */,
 				DC3919D92039C66E0048059D /* CategoryCell.swift in Sources */,
+				DC029D3B205EB39700598B52 /* HotelViewController.swift in Sources */,
 				DCC2C5A0203CF5420060676D /* MyTabBar.swift in Sources */,
 				DC3919DC203A1C670048059D /* Models.swift in Sources */,
 			);
