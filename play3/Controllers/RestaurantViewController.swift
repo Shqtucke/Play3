@@ -8,14 +8,21 @@
 
 import UIKit
 
-class RestaurantViewController: UIViewController {
+class RestaurantViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let webV    = UIWebView()
+        webV.frame  = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        webV.loadRequest(NSURLRequest(url: NSURL(string: "https://www.thrillist.com/eat/las-vegas/best-restaurants-las-vegas")! as URL) as URLRequest)
+        webV.delegate = self as! UIWebViewDelegate
+        self.view.addSubview(webV)
+        
+        
         view.backgroundColor = UIColor.blue
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Restaurants"
     }
 

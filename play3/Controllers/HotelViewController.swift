@@ -8,14 +8,19 @@
 
 import UIKit
 
-class HotelViewController: UIViewController {
+class HotelViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let webV    = UIWebView()
+        webV.frame  = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        webV.loadRequest(NSURLRequest(url: NSURL(string: "https://www.vdara.com/en.html")! as URL) as URLRequest)
+        webV.delegate = self as! UIWebViewDelegate
+        self.view.addSubview(webV)
+        
         view.backgroundColor = UIColor.orange
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Hotels"
     }
 

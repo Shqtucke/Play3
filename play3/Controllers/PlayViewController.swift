@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class PlayViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.green
-        navigationController?.navigationBar.prefersLargeTitles = true
+        var myMapView = MKMapView(frame: self.view.bounds)
+        
+        myMapView.mapType = MKMapType.standard
+        
+        self.view.addSubview(myMapView)
+        
+        
+        //view.backgroundColor = UIColor.green
         navigationItem.title = "PlayGround"
     }
 

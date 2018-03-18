@@ -8,16 +8,23 @@
 
 import UIKit
 
-class AirportViewController: UIViewController {
+class AirportViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let webV    = UIWebView()
+        webV.frame  = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        webV.loadRequest(NSURLRequest(url: NSURL(string: "https://www.mccarran.com/")! as URL) as URLRequest)
+        webV.delegate = self as! UIWebViewDelegate
+        self.view.addSubview(webV)
+        
         
         view.backgroundColor = UIColor.red
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "McCarran Airport"
+        //navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "LAS"
+        
     }
 
 

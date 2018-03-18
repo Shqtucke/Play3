@@ -64,6 +64,27 @@ class AppCategory: NSObject {
         cromwell.category = "Strip Casino"
         apps.append(cromwell)
         
+        let encore = App()
+        encore.name = "Encore"
+        encore.imageName = "3Encore"
+        encore.category = "Off strip"
+        apps.append(encore)
+        
+        let excalibur = App()
+        excalibur.name = "Excalibur"
+        excalibur.imageName = "3excalibur"
+        excalibur.category = "sout end"
+        apps.append(excalibur)
+        
+        let flamingo = App()
+        flamingo.name = "The Flamingo"
+        flamingo.imageName = "3flamingo"
+        flamingo.category = "center strip"
+        apps.append(flamingo)
+        
+        
+        
+        
         
         casinoCategory.apps = apps
         

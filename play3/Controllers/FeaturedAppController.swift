@@ -13,6 +13,7 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
     private let cellId = "cellId"
     
     var appCategories: [AppCategory]?
+    var cellData: [[String: AnyObject]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +71,9 @@ class FeaturedAppController: UICollectionViewController, UICollectionViewDelegat
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
-        cell.appCategory = appCategories?[indexPath.item]
-        cell.featuredAppsController = self
-        
+       cell.appCategory = appCategories?[indexPath.item]
+       cell.featuredAppsController = self
+
         return cell
     }
 
