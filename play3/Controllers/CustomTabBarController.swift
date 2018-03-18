@@ -29,22 +29,22 @@ class CustomTabBarController: UITabBarController {
         let airVC = AirportViewController()
         let airViewController = UINavigationController(rootViewController: airVC)
         airViewController.title = "fly"
-        airViewController.tabBarItem.image = UIImage(named:"7tours")
+        airViewController.tabBarItem.image = UIImage(named:"7airplane")
         
         let restVC = RestaurantViewController()
         let restViewController = UINavigationController(rootViewController: restVC)
         restViewController.title = "eat"
-        restViewController.tabBarItem.image = UIImage(named: "7conce1")
+        restViewController.tabBarItem.image = UIImage(named: "7eats")
         
         let hotelVC = HotelViewController()
         let hotelViewController = UINavigationController(rootViewController: hotelVC)
         hotelViewController.title = "stay"
-        hotelViewController.tabBarItem.image = UIImage(named: "7slots")
+        hotelViewController.tabBarItem.image = UIImage(named: "7hotel")
         
         let playVC = PlayViewController()
         let playViewController = UINavigationController(rootViewController: playVC)
         playViewController.title = "play"
-        playViewController.tabBarItem.image = UIImage(named: "7transpo")
+        playViewController.tabBarItem.image = UIImage(named: "7plays")
         
         
         
